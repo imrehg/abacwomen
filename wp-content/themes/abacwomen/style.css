@@ -12,3 +12,92 @@
 .main-navigation {
     margin-top: 0;
 }
+
+body.home header.entry-header {
+    display: none;
+}
+
+body.home div.site-content {
+    margin-top: 0;
+}
+
+ul.stream {
+    list-style: square inside;
+}
+
+ul.stream > li.stream-title {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div#feeds h1 {
+    font-size: 21px;
+    font-size: 1.5rem;
+}
+
+div#feeds h2 {
+    font-size: 18px;
+    font-size: 1.285714286rem;
+}
+
+div#feeds {
+    line-height: 1.5;
+}
+
+/*-------------------------------------------------------
+ Grouping
+-------------------------------------------------------*/
+
+/*  SECTIONS  */
+.section {
+        clear: both;
+        padding: 0px;
+        margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+        display: block;
+        float:left;
+        margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF TWO  */
+.span_2_of_2 {
+    width: 100%;
+}
+.span_1_of_2 {
+    width: 49.2%;
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 32.26%; }
+
+/*  GO FULL WIDTH AT LESS THAN 790 PIXELS */
+
+@media only screen and (max-width: 797px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+    .frontpage img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 797px) {
+    .span_2_of_2, .span_1_of_2 {
+        width: 100%;
+    }
+
+    .span_3_of_3, .span_2_of_3, .span_1_of_3 {
+        width: 100%;
+    }
+}
