@@ -85,6 +85,11 @@ get_header(); ?>
 				wp_reset_postdata();
 				wp_reset_query();
 				?>
+
+				<div class="search">
+					<h1>Search this website</h1>
+					<?php get_search_form( ); ?>
+				</div>
 			</div><!-- .frontpage.news -->
 		</div><!-- #feeds -->
 	</div><!-- #primary -->
