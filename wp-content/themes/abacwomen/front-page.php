@@ -34,7 +34,7 @@ get_header(); ?>
 				<?php
 				wp_reset_query();
 				$args = array(
-					'posts_per_page'   => 1,
+					'posts_per_page'   => 2,
 					'offset'           => 0,
 					'category'         => '',
 					'orderby'          => 'post_date',
@@ -50,7 +50,7 @@ get_header(); ?>
 				);
 				$news_posts = get_posts( $args );
 				?>
-				<h1 class="stream-title">Women's World</h1>
+				<!-- <h1 class="stream-title">Women's World</h1> -->
 				<ul class="stream">
 					<?php foreach ( $news_posts as $post ) : setup_postdata( $post ); ?>
 						<?php get_template_part( 'content', 'world' ); ?>
