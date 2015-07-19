@@ -7,6 +7,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>">
+	<?php the_title( sprintf( '<header class="stream-header"><h2 class="stream-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2></header>' ); ?>
+
         <a href="<?php the_permalink(); ?>">
         <?php if ( has_post_thumbnail() ) {
               the_post_thumbnail('frontpage');
@@ -16,7 +18,14 @@
         ?>
         </a>
 
-	<?php the_title( sprintf( '<header class="stream-header"><h2 class="stream-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2></header>' ); ?>
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
+		<p><a class="more-link" href="<?php the_permalink(); ?>" rel="bookmark">
+			<?php
+				/* translators: %s: Name of page */
+				printf( __( 'Read more %s', 'edin' ), the_title( '<span class="screen-reader-text">', '</span>', false ) );
+			?>
+		</a></p>
+	</div><!-- .entry-summary -->
 
 </article><!-- #post-## -->
-
