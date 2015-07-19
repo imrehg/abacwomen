@@ -7,7 +7,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>">
-	<?php the_title( sprintf( '<header class="stream-header"><h2 class="stream-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2></header>' ); ?>
+	<?php the_title( sprintf( '<header class="stream-header"><h1 class="stream-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1></header>' ); ?>
 
         <a href="<?php the_permalink(); ?>">
         <?php if ( has_post_thumbnail() ) {
